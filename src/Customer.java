@@ -1,13 +1,16 @@
 public class Customer extends User {
 
     // TODO: constructor
+    public Customer(String name,int userId){
+        super(name,userId);
+    }
 
 
     @Override
     public void manageService(Service s) {
 
         // TODO:
-        // print that customer cannot manage services
+        System.out.println(getName()+"Управление услугами доступно только администраторам");
 
     }
 
@@ -17,6 +20,8 @@ public class Customer extends User {
         // TODO:
         // print customer using message
         // call performService()
+        System.out.println(getName()+"использует"+s.getServiceName());
+        s.performService();
 
     }
 }

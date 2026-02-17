@@ -1,6 +1,9 @@
 public class Admin extends User {
 
     // TODO: constructor
+    public Admin(String name,int userId){
+        super(name,userId);
+    }
 
 
     @Override
@@ -8,6 +11,7 @@ public class Admin extends User {
 
         // TODO:
         // print admin managing message
+        System.out.println(getName()+"упровляет"+s.getServiceName());
 
     }
 
@@ -15,8 +19,8 @@ public class Admin extends User {
     public void useService(Service s) {
 
         // TODO:
-        // print admin using message
-        // call performService()
+        System.out.println(getName()+"использует"+s.getServiceName());
+        s.performService();
 
     }
 }

@@ -1,30 +1,46 @@
+import javax.xml.namespace.QName;
+
 public abstract class Service {
 
     // TODO: declare private fields
-    // serviceName
-    // serviceId
-    // isActive
+    private  String serviceName;
+    private int serviceId;
+    private boolean isActive;
 
 
     // TODO: constructor
+    public Service(String serviceName, int serviceId){
+        this.serviceName=serviceName;
+        this.serviceId=serviceId;
+        this.isActive=false;
+        }
 
 
-    // TODO: activateService()
-    // should set isActive = true
-    // print activation message
+    public void activateService() {
+        isActive = true;
+         System.out.println("active Massage");
+    }
 
 
-    // TODO: deactivateService()
-    // should set isActive = false
-    // print deactivation message
+    public void deactivateService() {
+        isActive= false;
+        System.out.println("deactivation message");
+    }
 
 
     // TODO: getter for serviceName
 
+    public String getServiceName() {
+        return serviceName;
+    }
 
-    // TODO: getter for isActive
 
 
-    // TODO: abstract method performService()
+    public boolean isActive() {
+        return isActive;
+    }
+// TODO: getter for isActive
+
+    abstract void performService();
 
 }
